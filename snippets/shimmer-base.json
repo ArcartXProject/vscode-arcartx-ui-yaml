@@ -1,0 +1,142 @@
+{
+  "基础: 变量": {
+    "prefix": ["var."],
+    "body": [
+      "var"
+    ],
+    "description": "可变变量"
+  },
+  "基础: 不可变量": {
+    "prefix": ["val."],
+    "body": [
+      "val"
+    ],
+    "description": "不可变变量"
+  },
+  "基础: 全局变量": {
+    "prefix": ["global."],
+    "body": [
+      "global"
+    ],
+    "description": "全局变量"
+  },
+  "基础: 客户端变量": {
+    "prefix": ["client."],
+    "body": [
+      "client"
+    ],
+    "description": "客户端变量"
+  },
+  "基础: 服务端变量": {
+    "prefix": ["server."],
+    "body": [
+      "server"
+    ],
+    "description": "服务器变量"
+  },
+  "基础: 当前对象": {
+    "prefix": ["self"],
+    "body": [
+      "self"
+    ],
+    "description": "当前对象"
+  },
+  "通讯处理器: 包": {
+    "prefix": ["packet"],
+    "body": [
+      "packet"
+    ],
+    "description": "包"
+  },
+  "基础: 参数": {
+    "prefix": ["args"],
+    "body": [
+      "args[${1:index}]"
+    ],
+    "description": "参数"
+  },
+  "基础: 条件语句": {
+    "prefix": "if",
+    "body": [
+      "if (${1:condition}) {",
+      "\t${2}",
+      "}"
+    ],
+    "description": "条件语句"
+  },
+  "基础: 条件语句（带else）": {
+    "prefix": "ifelse",
+    "body": [
+      "if (${1:condition}) {",
+      "\t${2}",
+      "} else {",
+      "\t${3}",
+      "}"
+    ],
+    "description": "条件语句（带else）"
+  },
+  "基础: for-in循环": {
+    "prefix": "for",
+    "body": [
+      "for (${1:item} in ${2:items}) {",
+      "\t${3}",
+      "}"
+    ],
+    "description": "for-in循环"
+  },
+  "基础: while循环": {
+    "prefix": "while",
+    "body": [
+      "while (${1:condition}) {",
+      "\t${2}",
+      "}"
+    ],
+    "description": "while循环"
+  },
+  "基础: switch语句": {
+    "prefix": "switch",
+    "body": [
+      "switch (${1:expression}) {",
+      "\tcase ${2:value} {",
+      "\t\t${3}",
+      "\t}",
+      "\telse {",
+      "\t\t${4}",
+      "\t}",
+      "}"
+    ],
+    "description": "switch语句"
+  },
+  "基础: case分支": {
+    "prefix": "case",
+    "body": [
+      "case ${1:value} {",
+      "\t${2}",
+      "}"
+    ],
+    "description": "case分支"
+  },
+  "基础: 异步代码块": {
+    "prefix": "async",
+    "body": [
+      "async {",
+      "\t${1}",
+      "}"
+    ],
+    "description": "异步代码块"
+  },
+  "基础: 创建数字范围": {
+    "prefix": "range",
+    "body": [
+      "range(${1:start}, ${2:end})"
+    ],
+    "description": "创建数字范围"
+  },
+  "基础: 范围判断": {
+    "prefix": "~r",
+    "body": [
+        "~~ range(${1:start}, ${2:end})"
+    ],
+    "description": "范围判断"
+  }
+}

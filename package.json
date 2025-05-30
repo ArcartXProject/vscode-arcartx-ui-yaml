@@ -1,0 +1,225 @@
+{
+  "name": "arcartx-shimmer-ui",
+  "displayName": "ArcartX Shimmer UI",
+  "icon": "icons/project.png",
+  "description": "ArcartX 界面配置开发工具，基于 YAML 语法，支持 Shimmer 高亮补全、ArcartX UI 结构补全。",
+  "version": "0.0.1",
+  "publisher": "ArcartXProject",
+  "author": {
+    "name": "17Artist"
+  },
+  "preview": true,
+  "engines": {
+    "vscode": "^1.100.0"
+  },
+  "categories": [
+    "Programming Languages",
+    "Snippets",
+    "Other"
+  ],
+  "keywords": [
+    "arcartx"
+  ],
+  "activationEvents": [],
+    "main": "./out/extension.js",
+  "contributes": {
+    "languages": [
+      {
+        "id": "arcartx-ui-yaml",
+        "aliases": [
+          "ArcartX UI YAML"
+        ],
+        "extensions": [
+          ".arx"
+        ],
+        "configuration": "./language-configuration.json",
+        "icon": {
+          "light": "./icons/arcartx.svg",
+          "dark": "./icons/arcartx.svg"
+        }
+      }
+    ],
+    "grammars": [
+      {
+        "language": "arcartx-ui-yaml",
+        "scopeName": "source.yaml.arcartx.ui",
+        "path": "./syntaxes/yaml.arcartx.ui.tmLanguage.json"
+      }
+    ],
+    "snippets": [
+      {
+        "language": "arcartx-ui-yaml",
+        "path": "./snippets/shimmer-base.json"
+      },
+      {
+        "language": "arcartx-ui-yaml",
+        "path": "./snippets/shimmer-function.json"
+      },
+      {
+        "language": "arcartx-ui-yaml",
+        "path": "./snippets/shimmer-animation.json"
+      },
+      {
+        "language": "arcartx-ui-yaml",
+        "path": "./snippets/shimmer-function-arcartx.json"
+      }
+    ],
+    "configurationDefaults": {
+      "[arcartx-ui-yaml]": {
+        "editor.tabSize": 2,
+        "editor.insertSpaces": true,
+        "editor.detectIndentation": false
+      },
+      "editor.tokenColorCustomizations": {
+        "textMateRules": [
+          {
+            "name": "Shimmer Normal",
+            "scope": [
+              "entity.name.identifier.shimmer"
+            ],
+            "settings": {
+              "foreground": "#D7D7DA",
+              "fontStyle": "italic"
+            }
+          },
+          {
+            "name": "Shimmer Comments",
+            "scope": [
+              "comment.line.double-slash.shimmer",
+              "comment.block.shimmer"
+            ],
+            "settings": {
+              "foreground": "#66747F",
+              "fontStyle": "italic"
+            }
+          },
+          {
+            "name": "Shimmer Strings",
+            "scope": [
+              "string.quoted.single.shimmer",
+              "string.quoted.double.shimmer",
+              "string.quoted.triple.shimmer"
+            ],
+            "settings": {
+              "foreground": "#8FBC8F",
+              "fontStyle": "italic"
+            }
+          },
+          {
+            "name": "Shimmer String Escapes",
+            "scope": "constant.character.escape.shimmer",
+            "settings": {
+              "foreground": "#FAFAD2",
+              "fontStyle": "italic"
+            }
+          },
+          {
+            "name": "Shimmer Numbers",
+            "scope": [
+              "constant.numeric.integer.shimmer",
+              "constant.numeric.float.shimmer",
+              "constant.numeric.hex.shimmer"
+            ],
+            "settings": {
+              "foreground": "#CE9178",
+              "fontStyle": "italic"
+            }
+          },
+          {
+            "name": "Shimmer Control Keywords",
+            "scope": "keyword.control.shimmer",
+            "settings": {
+              "foreground": "#7B68EE",
+              "fontStyle": "italic"
+            }
+          },
+          {
+            "name": "Shimmer Storage Types",
+            "scope": [
+              "storage.type.shimmer",
+              "variable.other.args.shimmer"
+            ],
+            "settings": {
+              "foreground": "#C586C0",
+              "fontStyle": "italic"
+            }
+          },
+          {
+            "name": "Shimmer Variables and Booleans",
+            "scope": [
+              "constant.language.boolean.shimmer"
+            ],
+            "settings": {
+              "foreground": "#9CDCFE",
+              "fontStyle": "italic"
+            }
+          },
+          {
+            "name": "Shimmer Classes",
+            "scope": "support.class.shimmer",
+            "settings": {
+              "foreground": "#D16969",
+              "fontStyle": "italic"
+            }
+          },
+          {
+            "name": "Shimmer Functions",
+            "scope": "support.function.shimmer",
+            "settings": {
+              "foreground": "#D7BA7D",
+              "fontStyle": "italic"
+            }
+          },
+          {
+            "name": "Shimmer Operators",
+            "scope": [
+              "keyword.operator.assignment.shimmer",
+              "keyword.operator.arithmetic.shimmer",
+              "keyword.operator.logical.shimmer",
+              "keyword.operator.comparison.shimmer",
+              "keyword.operator.other.shimmer"
+            ],
+            "settings": {
+              "foreground": "#BEBEBE",
+              "fontStyle": "italic"
+            }
+          },
+          {
+            "name": "Shimmer Invalid Syntax",
+            "scope": [
+              "invalid.illegal.args-empty-brackets.shimmer",
+              "invalid.illegal.args-incomplete.shimmer",
+              "invalid.illegal.args-without-index.shimmer"
+            ],
+            "settings": {
+              "foreground": "#F44747",
+              "fontStyle": "italic underline"
+            }
+          }
+        ]
+      }
+    }
+  },
+  "scripts": {
+    "vscode:prepublish": "npm run compile",
+    "compile": "tsc -p ./",
+    "watch": "tsc -watch -p ./",
+    "pretest": "npm run compile && npm run lint",
+    "lint": "eslint src",
+    "test": "vscode-test"
+  },
+  "devDependencies": {
+    "@types/node": "16.x",
+    "@types/vscode": "^1.74.0",
+    "typescript": "^4.9.4"
+  },
+  "license": "Apache-2.0",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ArcartXProject/vscode-arcartx-ui-yaml"
+  },
+  "bugs": {
+    "url": "https://github.com/ArcartXProject/vscode-arcartx-ui-yaml/issues"
+  },
+  "homepage": "https://github.com/ArcartXProject/vscode-arcartx-ui-yaml/blob/main/README.md"
+}

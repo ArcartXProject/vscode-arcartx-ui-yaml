@@ -1,0 +1,681 @@
+{
+  "函数: 转换为布尔值": {
+    "prefix": "Cast.toBoolean",
+    "body": [
+      "Cast.toBoolean(${1:value})"
+    ],
+    "description": "将值转换为布尔类型"
+  },
+  "函数: 转换为整数": {
+    "prefix": "Cast.toInt",
+    "body": [
+      "Cast.toInt(${1:value})"
+    ],
+    "description": "将值转换为整数类型"
+  },
+  "函数: 转换为双精度浮点数": {
+    "prefix": "Cast.toDouble",
+    "body": [
+      "Cast.toDouble(${1:value})"
+    ],
+    "description": "将值转换为双精度浮点类型"
+  },
+  "函数: 转换为字符串": {
+    "prefix": "Cast.toString",
+    "body": [
+      "Cast.toString(${1:value})"
+    ],
+    "description": "将值转换为字符串类型"
+  },
+  "函数: 转换为单精度浮点数": {
+    "prefix": "Cast.toFloat",
+    "body": [
+      "Cast.toFloat(${1:value})"
+    ],
+    "description": "将值转换为单精度浮点类型"
+  },
+  "函数: 转换为长整数": {
+    "prefix": "Cast.toLong",
+    "body": [
+      "Cast.toLong(${1:value})"
+    ],
+    "description": "将值转换为长整数类型"
+  },
+  "函数: 打开聊天": {
+    "prefix": "Chat.open",
+    "body": [
+      "Chat.open(${1:message})"
+    ],
+    "description": "打开聊天界面，可选择是否预填充消息"
+  },
+  "函数: 设置聊天消息": {
+    "prefix": "Chat.setMessage",
+    "body": [
+      "Chat.setMessage(${1:message})"
+    ],
+    "description": "设置聊天框的内容"
+  },
+  "函数: 添加聊天消息": {
+    "prefix": "Chat.addMessage",
+    "body": [
+      "Chat.addMessage(${1:message})"
+    ],
+    "description": "在当前聊天框内容后追加文本"
+  },
+  "函数: 获取聊天消息": {
+    "prefix": "Chat.getMessage",
+    "body": [
+      "Chat.getMessage()"
+    ],
+    "description": "获取当前聊天框的内容"
+  },
+  "函数: 发送聊天": {
+    "prefix": "Chat.say",
+    "body": [
+      "Chat.say(${1:message})"
+    ],
+    "description": "发送一条聊天消息"
+  },
+  "函数: 获取事件消息": {
+    "prefix": "Chat.getEventMessage",
+    "body": [
+      "Chat.getEventMessage()"
+    ],
+    "description": "获取当前事件的聊天消息"
+  },
+  "函数: 获取最后消息": {
+    "prefix": "Chat.getLastMessage",
+    "body": [
+      "Chat.getLastMessage()"
+    ],
+    "description": "获取最后一条聊天消息"
+  },
+  "函数: 设置窗口可调整大小": {
+    "prefix": "Display.setResizable",
+    "body": [
+      "Display.setResizable(${1:resizable})"
+    ],
+    "description": "设置窗口是否可调整大小"
+  },
+  "函数: 设置全屏": {
+    "prefix": "Display.setFullScreen",
+    "body": [
+      "Display.setFullScreen(${1:fullscreen})"
+    ],
+    "description": "设置窗口是否全屏"
+  },
+  "函数: 是否全屏": {
+    "prefix": "Display.isFullScreen",
+    "body": [
+      "Display.isFullScreen()"
+    ],
+    "description": "获取窗口是否处于全屏状态"
+  },
+  "函数: 是否可调整大小": {
+    "prefix": "Display.isResizable",
+    "body": [
+      "Display.isResizable()"
+    ],
+    "description": "获取窗口是否可调整大小"
+  },
+  "函数: 桌面宽度": {
+    "prefix": "Display.desktopWidth",
+    "body": [
+      "Display.desktopWidth()"
+    ],
+    "description": "获取桌面宽度"
+  },
+  "函数: 桌面高度": {
+    "prefix": "Display.desktopHeight",
+    "body": [
+      "Display.desktopHeight()"
+    ],
+    "description": "获取桌面高度"
+  },
+  "函数: 显示宽度": {
+    "prefix": "Display.width",
+    "body": [
+      "Display.width()"
+    ],
+    "description": "获取窗口宽度"
+  },
+  "函数: 显示高度": {
+    "prefix": "Display.height",
+    "body": [
+      "Display.height()"
+    ],
+    "description": "获取窗口高度"
+  },
+  "函数: 显示X坐标": {
+    "prefix": "Display.x",
+    "body": [
+      "Display.x()"
+    ],
+    "description": "获取窗口X坐标"
+  },
+  "函数: 显示Y坐标": {
+    "prefix": "Display.y",
+    "body": [
+      "Display.y()"
+    ],
+    "description": "获取窗口Y坐标"
+  },
+  "函数: 设置位置": {
+    "prefix": "Display.setLocation",
+    "body": [
+      "Display.setLocation(${1:x}, ${2:y})"
+    ],
+    "description": "设置窗口位置"
+  },
+  "函数: 调整大小": {
+    "prefix": "Display.resize",
+    "body": [
+      "Display.resize(${1:width}, ${2:height})"
+    ],
+    "description": "调整窗口大小"
+  },
+  "函数: 获取缩放": {
+    "prefix": "Display.getScale",
+    "body": [
+      "Display.getScale()"
+    ],
+    "description": "获取窗口缩放比例"
+  },
+  "函数: 实体是否渲染": {
+    "prefix": "Entity.isRendering",
+    "body": [
+      "Entity.isRendering(${1:uuid})"
+    ],
+    "description": "检查指定UUID的实体是否正在渲染"
+  },
+  "函数: 获取鼠标实体名称": {
+    "prefix": "Entity.getMouseEntityName",
+    "body": [
+      "Entity.getMouseEntityName()"
+    ],
+    "description": "获取鼠标指向实体的名称"
+  },
+  "函数: 获取鼠标实体距离": {
+    "prefix": "Entity.getMouseEntityDistance",
+    "body": [
+      "Entity.getMouseEntityDistance()"
+    ],
+    "description": "获取玩家与鼠标指向实体的距离"
+  },
+  "函数: 获取鼠标实体UUID": {
+    "prefix": "Entity.getMouseEntityUUID",
+    "body": [
+      "Entity.getMouseEntityUUID()"
+    ],
+    "description": "获取鼠标指向实体的UUID"
+  },
+  "函数: 获取鼠标实体生命值": {
+    "prefix": "Entity.getMouseEntityHealth",
+    "body": [
+      "Entity.getMouseEntityHealth()"
+    ],
+    "description": "获取鼠标指向实体的当前生命值"
+  },
+  "函数: 获取鼠标实体最大生命值": {
+    "prefix": "Entity.getMouseEntityMaxHealth",
+    "body": [
+      "Entity.getMouseEntityMaxHealth()"
+    ],
+    "description": "获取鼠标指向实体的最大生命值"
+  },
+  "函数: 雾效设置": {
+    "prefix": "Fog.setup",
+    "body": [
+      "Fog.setup(${1:r}, ${2:g}, ${3:b}, ${4:start}, ${5:end})"
+    ],
+    "description": "设置雾效参数"
+  },
+  "函数: 清除雾效": {
+    "prefix": "Fog.clear",
+    "body": [
+      "Fog.clear()"
+    ],
+    "description": "清除当前雾效设置"
+  },
+  "函数: 游戏选项": {
+    "prefix": "Game.options",
+    "body": [
+      "Game.options()"
+    ],
+    "description": "打开游戏选项界面"
+  },
+  "函数: 退出游戏": {
+    "prefix": "Game.quit",
+    "body": [
+      "Game.quit()"
+    ],
+    "description": "退出当前游戏"
+  },
+  "函数: 关闭游戏": {
+    "prefix": "Game.shutdown",
+    "body": [
+      "Game.shutdown()"
+    ],
+    "description": "关闭游戏客户端"
+  },
+  "函数: 成就界面": {
+    "prefix": "Game.advancements",
+    "body": [
+      "Game.advancements()"
+    ],
+    "description": "打开成就界面"
+  },
+  "函数: 统计信息": {
+    "prefix": "Game.stat",
+    "body": [
+      "Game.stat()"
+    ],
+    "description": "打开统计信息界面"
+  },
+  "函数: 设置缩放": {
+    "prefix": "Game.setScale",
+    "body": [
+      "Game.setScale(${1:scale})"
+    ],
+    "description": "设置游戏界面缩放比例"
+  },
+  "函数: 获取帧率": {
+    "prefix": "Game.getFPS",
+    "body": [
+      "Game.getFPS()"
+    ],
+    "description": "获取当前游戏帧率"
+  },
+  "函数: 按键是否按下": {
+    "prefix": "Keyboard.isKeyDown",
+    "body": [
+      "Keyboard.isKeyDown(${1:key})"
+    ],
+    "description": "检测指定按键是否被按下"
+  },
+  "函数: 获取按键绑定名称": {
+    "prefix": "Keyboard.getKeyBindingKeyName",
+    "body": [
+      "Keyboard.getKeyBindingKeyName(${1:binding})"
+    ],
+    "description": "获取按键绑定的显示名称"
+  },
+  "函数: 获取按键绑定修饰键名称": {
+    "prefix": "Keyboard.getKeyBindingKeyModifierName",
+    "body": [
+      "Keyboard.getKeyBindingKeyModifierName(${1:binding})"
+    ],
+    "description": "获取按键绑定的修饰键名称"
+  },
+  "函数: 设置按键绑定名称": {
+    "prefix": "Keyboard.setKeyBindingKeyName",
+    "body": [
+      "Keyboard.setKeyBindingKeyName(${1:binding}, ${2:modifier}, ${3:keyCode})"
+    ],
+    "description": "设置按键绑定"
+  },
+  "函数: 按键操作": {
+    "prefix": "Keyboard.keyPress",
+    "body": [
+      "Keyboard.keyPress(${1:key}, ${2:pressed})"
+    ],
+    "description": "模拟按键按下或释放"
+  },
+  "函数: 聊天消息": {
+    "prefix": "Message.chat",
+    "body": [
+      "Message.chat(${1:message})"
+    ],
+    "description": "发送聊天消息"
+  },
+  "函数: 动作栏消息": {
+    "prefix": "Message.actionBar",
+    "body": [
+      "Message.actionBar(${1:message})"
+    ],
+    "description": "在动作栏显示消息"
+  },
+  "函数: 标题消息": {
+    "prefix": "Message.title",
+    "body": [
+      "Message.title(${1:title}, ${2:subtitle}, ${3:fadeIn}, ${4:stay}, ${5:fadeOut})"
+    ],
+    "description": "显示标题和副标题"
+  },
+  "函数: 获取实体名称": {
+    "prefix": "Name.getEntityName",
+    "body": [
+      "Name.getEntityName(${1:uuid})"
+    ],
+    "description": "根据UUID获取实体名称"
+  },
+  "函数: 获取方块名称": {
+    "prefix": "Name.getBlockName",
+    "body": [
+      "Name.getBlockName(${1:x}, ${2:y}, ${3:z})"
+    ],
+    "description": "获取指定坐标方块的名称"
+  },
+  "函数: 发送数据包": {
+    "prefix": "Packet.send",
+    "body": [
+      "Packet.send(${1:type}, ${2:data})"
+    ],
+    "description": "发送自定义网络数据包"
+  },
+  "函数: 解析占位符": {
+    "prefix": "Placeholder.parse",
+    "body": [
+      "Placeholder.parse(${1:placeholder})"
+    ],
+    "description": "解析服务器变量占位符"
+  },
+  "函数: 获取玩家名称": {
+    "prefix": "Player.getName",
+    "body": [
+      "Player.getName()"
+    ],
+    "description": "获取玩家名称"
+  },
+  "函数: 获取玩家UUID": {
+    "prefix": "Player.getUUID",
+    "body": [
+      "Player.getUUID()"
+    ],
+    "description": "获取玩家UUID"
+  },
+  "函数: 获取在线玩家字典": {
+    "prefix": "Player.getOnlinePlayersDict",
+    "body": [
+      "Player.getOnlinePlayersDict()"
+    ],
+    "description": "获取在线玩家列表"
+  },
+  "函数: 获取玩家生命值": {
+    "prefix": "Player.getHealth",
+    "body": [
+      "Player.getHealth()"
+    ],
+    "description": "获取玩家当前生命值"
+  },
+  "函数: 获取玩家最大生命值": {
+    "prefix": "Player.getMaxHealth",
+    "body": [
+      "Player.getMaxHealth()"
+    ],
+    "description": "获取玩家最大生命值"
+  },
+  "函数: 获取玩家等级": {
+    "prefix": "Player.getLevel",
+    "body": [
+      "Player.getLevel()"
+    ],
+    "description": "获取玩家等级"
+  },
+  "函数: 获取玩家经验": {
+    "prefix": "Player.getExp",
+    "body": [
+      "Player.getExp()"
+    ],
+    "description": "获取玩家经验值"
+  },
+  "函数: 获取玩家X坐标": {
+    "prefix": "Player.getPosX",
+    "body": [
+      "Player.getPosX()"
+    ],
+    "description": "获取玩家X坐标"
+  },
+  "函数: 获取玩家Y坐标": {
+    "prefix": "Player.getPosY",
+    "body": [
+      "Player.getPosY()"
+    ],
+    "description": "获取玩家Y坐标"
+  },
+  "函数: 获取玩家Z坐标": {
+    "prefix": "Player.getPosZ",
+    "body": [
+      "Player.getPosZ()"
+    ],
+    "description": "获取玩家Z坐标"
+  },
+  "函数: 获取玩家偏航角": {
+    "prefix": "Player.getYaw",
+    "body": [
+      "Player.getYaw()"
+    ],
+    "description": "获取玩家偏航角"
+  },
+  "函数: 获取玩家俯仰角": {
+    "prefix": "Player.getPitch",
+    "body": [
+      "Player.getPitch()"
+    ],
+    "description": "获取玩家俯仰角"
+  },
+  "函数: 玩家是否飞行": {
+    "prefix": "Player.isFlying",
+    "body": [
+      "Player.isFlying()"
+    ],
+    "description": "检测玩家飞行状态"
+  },
+  "函数: 玩家是否在水中": {
+    "prefix": "Player.isInWater",
+    "body": [
+      "Player.isInWater()"
+    ],
+    "description": "检测玩家在水中状态"
+  },
+  "函数: 玩家是否在地面": {
+    "prefix": "Player.isOnGround",
+    "body": [
+      "Player.isOnGround()"
+    ],
+    "description": "检测玩家在地面状态"
+  },
+  "函数: 获取玩家饥饿值": {
+    "prefix": "Player.getFood",
+    "body": [
+      "Player.getFood()"
+    ],
+    "description": "获取玩家饥饿值"
+  },
+  "函数: 获取玩家氧气值": {
+    "prefix": "Player.getAir",
+    "body": [
+      "Player.getAir()"
+    ],
+    "description": "获取玩家氧气值"
+  },
+  "函数: 获取玩家护甲值": {
+    "prefix": "Player.getArmor",
+    "body": [
+      "Player.getArmor()"
+    ],
+    "description": "获取玩家护甲值"
+  },
+  "函数: 获取当前物品": {
+    "prefix": "Player.getCurrentItem",
+    "body": [
+      "Player.getCurrentItem()"
+    ],
+    "description": "获取当前选中物品栏位置"
+  },
+  "函数: 获取激活药水效果": {
+    "prefix": "Potion.getActivePotionEffects",
+    "body": [
+      "Potion.getActivePotionEffects()"
+    ],
+    "description": "获取玩家当前所有激活的药水效果"
+  },
+  "函数: 获取屏幕宽度": {
+    "prefix": "Screen.getWidth",
+    "body": [
+      "Screen.getWidth()"
+    ],
+    "description": "获取游戏窗口的宽度"
+  },
+  "函数: 获取屏幕高度": {
+    "prefix": "Screen.getHeight",
+    "body": [
+      "Screen.getHeight()"
+    ],
+    "description": "获取游戏窗口的高度"
+  },
+  "函数: 打开屏幕": {
+    "prefix": "Screen.open",
+    "body": [
+      "Screen.open(${1:name})"
+    ],
+    "description": "打开指定ID的UI"
+  },
+  "函数: 关闭屏幕": {
+    "prefix": "Screen.close",
+    "body": [
+      "Screen.close(${1:name})"
+    ],
+    "description": "关闭当前或指定的菜单界面"
+  },
+  "函数: 启动着色器": {
+    "prefix": "Shader.start",
+    "body": [
+      "Shader.start(${1:shaderName})"
+    ],
+    "description": "启动指定的着色器效果"
+  },
+  "函数: 更新着色器": {
+    "prefix": "Shader.update",
+    "body": [
+      "Shader.update(${1:shaderName}, ${2:value})"
+    ],
+    "description": "更新指定着色器的参数值"
+  },
+  "函数: 关闭着色器": {
+    "prefix": "Shader.close",
+    "body": [
+      "Shader.close()"
+    ],
+    "description": "关闭当前运行的着色器效果"
+  },
+  "函数: 设置天空盒": {
+    "prefix": "Skybox.set",
+    "body": [
+      "Skybox.set(${1:path})"
+    ],
+    "description": "设置天空盒纹理"
+  },
+  "函数: 清除天空盒": {
+    "prefix": "Skybox.clear",
+    "body": [
+      "Skybox.clear()"
+    ],
+    "description": "清除当前天空盒纹理，恢复默认天空盒"
+  },
+  "函数: 本地音效": {
+    "prefix": "Sound.local",
+    "body": [
+      "Sound.local(${1:identifier}, ${2:x}, ${3:y}, ${4:z}, ${5:category}, ${6:distance}, ${7:pitch}, ${8:duration})"
+    ],
+    "description": "在指定位置播放3D音效"
+  },
+  "函数: 实体音效": {
+    "prefix": "Sound.entity",
+    "body": [
+      "Sound.entity(${1:identifier}, ${2:target}, ${3:category}, ${4:distance}, ${5:pitch}, ${6:duration})"
+    ],
+    "description": "为指定实体播放3D音效"
+  },
+  "函数: 自身音效": {
+    "prefix": "Sound.self",
+    "body": [
+      "Sound.self(${1:identifier}, ${2:pitch}, ${3:duration})"
+    ],
+    "description": "为客户端玩家自身播放音效"
+  },
+  "函数: 线程休眠": {
+    "prefix": "Thread.sleep",
+    "body": [
+      "Thread.sleep(${1:time})"
+    ],
+    "description": "使当前线程暂停执行指定的毫秒数"
+  },
+  "函数: 当前时间": {
+    "prefix": "Time.currentTime",
+    "body": [
+      "Time.currentTime()"
+    ],
+    "description": "获取当前时间戳（毫秒）"
+  },
+  "函数: 格式化时间": {
+    "prefix": "Time.currentTimeFormat",
+    "body": [
+      "Time.currentTimeFormat(${1:timestamp}, ${2:format})"
+    ],
+    "description": "格式化时间戳为可读字符串"
+  },
+  "函数: 打开网页": {
+    "prefix": "Web.open",
+    "body": [
+      "Web.open(${1:url})"
+    ],
+    "description": "在默认浏览器中打开指定URL"
+  },
+  "函数: 鼠标滚轮": {
+    "prefix": "Mouse.wheel",
+    "body": [
+      "Mouse.wheel()"
+    ],
+    "description": "获取鼠标滚轮滚动值"
+  },
+  "函数: 鼠标X坐标": {
+    "prefix": "Mouse.x",
+    "body": [
+      "Mouse.x()"
+    ],
+    "description": "获取鼠标X坐标"
+  },
+  "函数: 鼠标Y坐标": {
+    "prefix": "Mouse.y",
+    "body": [
+      "Mouse.y()"
+    ],
+    "description": "获取鼠标Y坐标"
+  },
+  "函数: 获取鼠标事件按钮": {
+    "prefix": "Mouse.getEventButton",
+    "body": [
+      "Mouse.getEventButton()"
+    ],
+    "description": "获取鼠标当前按下的按键"
+  },
+  "函数: 设置相机位置": {
+    "prefix": "Camera.setCameraPosition",
+    "body": [
+      "Camera.setCameraPosition(${1:x}, ${2:y}, ${3:z}, ${4:isFree})"
+    ],
+    "description": "设置相机位置"
+  },
+  "函数: 设置第三人称": {
+    "prefix": "Camera.setThirdPerson",
+    "body": [
+      "Camera.setThirdPerson(${1:isThirdPerson})"
+    ],
+    "description": "设置第三人称视角"
+  },
+  "函数: 设置相机预设": {
+    "prefix": "Camera.setCameraPreset",
+    "body": [
+      "Camera.setCameraPreset(${1:preset})"
+    ],
+    "description": "设置相机预设"
+  },
+  "函数: 锁定相机模式": {
+    "prefix": "Camera.lockCameraMode",
+    "body": [
+      "Camera.lockCameraMode(${1:isLock})"
+    ],
+    "description": "锁定相机模式"
+  }
+}
