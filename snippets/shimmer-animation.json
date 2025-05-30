@@ -1,0 +1,128 @@
+{
+  "动画: 线性插值": {
+    "prefix": "Lerp",
+    "body": [
+      "Lerp(${1:start}, ${2:end}, ${3:transferTime})"
+    ],
+    "description": "创建一个线性插值实例，用于处理数值的平滑过渡"
+  },
+  "动画: 回弹插值": {
+    "prefix": "Back",
+    "body": [
+      "Back(${1:start}, ${2:end}, ${3:1.70158}, ${4:type}, ${5:transferTime})"
+    ],
+    "description": "创建一个回弹插值实例"
+  },
+  "动画: 贝塞尔插值": {
+    "prefix": "Bezier",
+    "body": [
+      "Bezier(${1:start}, ${2:end}, ${3:x1}, ${4:y1}, ${5:x2}, ${6:y2}, ${7:transferTime})"
+    ],
+    "description": "创建一个贝塞尔曲线插值实例"
+  },
+  "动画: 弹跳插值": {
+    "prefix": "Bounce",
+    "body": [
+      "Bounce(${1:start}, ${2:end}, ${3:bounces}, ${4:decay}, ${5:transferTime})"
+    ],
+    "description": "创建一个弹跳插值实例"
+  },
+  "动画: 圆周X坐标": {
+    "prefix": "CircX",
+    "body": [
+      "CircX(${1:centerX}, ${2:centerY}, ${3:radius}, ${4:transferTime})"
+    ],
+    "description": "创建圆周运动的X坐标控制器"
+  },
+  "动画: 圆周Y坐标": {
+    "prefix": "CircY",
+    "body": [
+      "CircY(${1:centerX}, ${2:centerY}, ${3:radius}, ${4:transferTime})"
+    ],
+    "description": "创建圆周运动的Y坐标控制器"
+  },
+  "动画: 弹性插值": {
+    "prefix": "Elastic",
+    "body": [
+      "Elastic(${1:start}, ${2:end}, ${3:amplitude}, ${4:period}, ${5:transferTime})"
+    ],
+    "description": "创建一个弹性插值实例"
+  },
+  "动画: 指数插值": {
+    "prefix": "Expo",
+    "body": [
+      "Expo(${1:start}, ${2:end}, ${3:type}, ${4:transferTime})"
+    ],
+    "description": "创建一个指数插值实例"
+  },
+  "动画: 二次方插值": {
+    "prefix": "Q2",
+    "body": [
+      "Q2(${1:start}, ${2:end}, ${3:type}, ${4:transferTime})"
+    ],
+    "description": "创建一个二次方插值实例"
+  },
+  "动画: 三次方插值": {
+    "prefix": "Q3",
+    "body": [
+      "Q3(${1:start}, ${2:end}, ${3:type}, ${4:transferTime})"
+    ],
+    "description": "创建一个三次方插值实例"
+  },
+  "动画: 四次方插值": {
+    "prefix": "Q4",
+    "body": [
+      "Q4(${1:start}, ${2:end}, ${3:type}, ${4:transferTime})"
+    ],
+    "description": "创建一个四次方插值实例"
+  },
+  "动画: 五次方插值": {
+    "prefix": "Q5",
+    "body": [
+      "Q5(${1:start}, ${2:end}, ${3:type}, ${4:transferTime})"
+    ],
+    "description": "创建一个五次方插值实例"
+  },
+  "动画: 正弦插值": {
+    "prefix": "Sine",
+    "body": [
+      "Sine(${1:start}, ${2:end}, ${3:type}, ${4:transferTime})"
+    ],
+    "description": "创建一个正弦插值实例"
+  },
+  "动画: 平滑插值": {
+    "prefix": "Smooth",
+    "body": [
+      "Smooth(${1:start}, ${2:end}, ${3:transferTime})"
+    ],
+    "description": "创建一个平滑插值实例"
+  },
+  "动画: 弹簧插值": {
+    "prefix": "Spring",
+    "body": [
+      "Spring(${1:start}, ${2:end}, ${3:tension}, ${4:damping}, ${5:transferTime})"
+    ],
+    "description": "创建一个弹簧插值实例"
+  },
+  "动画: 淡入淡出": {
+    "prefix": "Fade",
+    "body": [
+      "Fade(${1:fadeInDuration}, ${2:stayDuration}, ${3:fadeOutDuration})"
+    ],
+    "description": "创建一个淡入淡出动画实例，用于控制元素的不透明度变化"
+  },
+  "动画: 双阶段线性插值": {
+    "prefix": "TwoLerp",
+    "body": [
+      "TwoLerp(${1:initialValue}, ${2:middleValue}, ${3:finalValue}, ${4:firstStageTime}, ${5:secondStageTime})"
+    ],
+    "description": "创建一个双阶段线性插值实例"
+  },
+  "动画: 闪烁效果": {
+    "prefix": "Blink",
+    "body": [
+      "Blink(${1:start}, ${2:end}, ${3:transferTime})"
+    ],
+    "description": "创建一个闪烁效果实例"
+  }
+}

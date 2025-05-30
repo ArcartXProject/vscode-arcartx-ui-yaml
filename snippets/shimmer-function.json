@@ -1,0 +1,211 @@
+{
+  "函数: 打印并换行": {
+    "prefix": ["println", "Shimmer.println"],
+    "body": [
+      "Shimmer.println(\"${1:text}\")"
+    ],
+    "description": "打印文本并换行"
+  },
+  "函数: 打印": {
+    "prefix": ["print", "Shimmer.print"],
+    "body": [
+      "Shimmer.print(\"${1:text}\")"
+    ],
+    "description": "打印文本"
+  },
+  "函数: 数学绝对值": {
+    "prefix": ["Math.abs", "abs"],
+    "body": ["Math.abs(${1:target})"],
+    "description": "返回数字的绝对值"
+  },
+  "函数: 数学反余弦": {
+    "prefix": ["Math.acos", "acos"],
+    "body": ["Math.acos(${1:target})"],
+    "description": "返回数字的反余弦值（弧度）"
+  },
+  "函数: 数学反正弦": {
+    "prefix": ["Math.asin", "asin"],
+    "body": ["Math.asin(${1:target})"],
+    "description": "返回数字的反正弦值（弧度）"
+  },
+  "函数: 数学反正切": {
+    "prefix": ["Math.atan", "atan"],
+    "body": ["Math.atan(${1:target})"],
+    "description": "返回数字的反正切值（弧度）"
+  },
+  "函数: 数学双参数反正切": {
+    "prefix": ["Math.atan2", "atan2"],
+    "body": ["Math.atan2(${1:y}, ${2:x})"],
+    "description": "返回从 x 轴到点 (x,y) 的角度（弧度）"
+  },
+  "函数: 数学立方根": {
+    "prefix": ["Math.cbrt", "cbrt"],
+    "body": ["Math.cbrt(${1:target})"],
+    "description": "返回数字的立方根"
+  },
+  "函数: 数学向上取整": {
+    "prefix": ["Math.ceil", "ceil"],
+    "body": ["Math.ceil(${1:target})"],
+    "description": "返回大于或等于数字的最小整数"
+  },
+  "函数: 数学余弦": {
+    "prefix": ["Math.cos", "cos"],
+    "body": ["Math.cos(${1:target})"],
+    "description": "返回数字的余弦值"
+  },
+  "函数: 数学向下取整": {
+    "prefix": ["Math.floor", "floor"],
+    "body": ["Math.floor(${1:target})"],
+    "description": "返回小于或等于数字的最大整数"
+  },
+  "函数: 数学最大值": {
+    "prefix": ["Math.max", "max"],
+    "body": ["Math.max(${1:a}, ${2:b})"],
+    "description": "返回两个数字中的较大值"
+  },
+  "函数: 数学最小值": {
+    "prefix": ["Math.min", "min"],
+    "body": ["Math.min(${1:a}, ${2:b})"],
+    "description": "返回两个数字中的较小值"
+  },
+  "函数: 数学圆周率": {
+    "prefix": ["Math.pi", "pi"],
+    "body": ["Math.pi()"],
+    "description": "返回圆周率 π 的值"
+  },
+  "函数: 数学随机数": {
+    "prefix": ["Math.random", "random"],
+    "body": ["Math.random()"],
+    "description": "返回 0 到 1 之间的随机数"
+  },
+  "函数: 数学正弦": {
+    "prefix": ["Math.sin", "sin"],
+    "body": ["Math.sin(${1:target})"],
+    "description": "返回数字的正弦值"
+  },
+  "函数: 数学平方根": {
+    "prefix": ["Math.sqrt", "sqrt"],
+    "body": ["Math.sqrt(${1:target})"],
+    "description": "返回数字的平方根"
+  },
+  "函数: 数学正切": {
+    "prefix": ["Math.tan", "tan"],
+    "body": ["Math.tan(${1:target})"],
+    "description": "返回数字的正切值"
+  },
+  "函数: 数学弧度转角度": {
+    "prefix": ["Math.toDegrees", "toDegrees"],
+    "body": ["Math.toDegrees(${1:target})"],
+    "description": "将弧度转换为角度"
+  },
+  "函数: 数学角度转弧度": {
+    "prefix": ["Math.toRadians", "toRadians"],
+    "body": ["Math.toRadians(${1:target})"],
+    "description": "将角度转换为弧度"
+  },
+  "函数: 数学最后精度位": {
+    "prefix": ["Math.ulp", "ulp"],
+    "body": ["Math.ulp(${1:target})"],
+    "description": "返回参数的最后一位精度值"
+  },
+  "函数: 数学符号函数": {
+    "prefix": ["Math.signum", "signum"],
+    "body": ["Math.signum(${1:target})"],
+    "description": "返回数字的符号函数"
+  },
+  "函数: 数学就近取整": {
+    "prefix": ["Math.rint", "rint"],
+    "body": ["Math.rint(${1:target})"],
+    "description": "返回最接近参数的整数值"
+  },
+  "函数: 数学四舍五入": {
+    "prefix": ["Math.round", "round"],
+    "body": ["Math.round(${1:target})"],
+    "description": "返回最接近的整数，四舍五入"
+  },
+  "函数: 数学自然对数": {
+    "prefix": ["Math.log", "log"],
+    "body": ["Math.log(${1:target})"],
+    "description": "返回数字的自然对数"
+  },
+  "函数: 数学常用对数": {
+    "prefix": ["Math.log10", "log10"],
+    "body": ["Math.log10(${1:target})"],
+    "description": "返回数字的以10为底的对数"
+  },
+  "函数: 数学对数加一": {
+    "prefix": ["Math.log1p", "log1p"],
+    "body": ["Math.log1p(${1:target})"],
+    "description": "返回 ln(1 + target) 的值"
+  },
+  "函数: 数学指数函数": {
+    "prefix": ["Math.exp", "exp"],
+    "body": ["Math.exp(${1:target})"],
+    "description": "返回 e 的 target 次幂"
+  },
+  "函数: 数学指数减一": {
+    "prefix": ["Math.expm1", "expm1"],
+    "body": ["Math.expm1(${1:target})"],
+    "description": "返回 exp(target) - 1 的值"
+  },
+  "函数: 数学获取指数": {
+    "prefix": ["Math.getExponent", "getExponent"],
+    "body": ["Math.getExponent(${1:target})"],
+    "description": "返回浮点数的指数部分"
+  },
+  "函数: 数学斜边长": {
+    "prefix": ["Math.hypot", "hypot"],
+    "body": ["Math.hypot(${1:x}, ${2:y})"],
+    "description": "返回 sqrt(x² + y²) 的值"
+  },
+  "函数: 数学下一个浮点数": {
+    "prefix": ["Math.nextAfter", "nextAfter"],
+    "body": ["Math.nextAfter(${1:start}, ${2:direction})"],
+    "description": "返回从 start 向 direction 方向的下一个浮点值"
+  },
+  "函数: 数学向上下一个": {
+    "prefix": ["Math.nextUp", "nextUp"],
+    "body": ["Math.nextUp(${1:target})"],
+    "description": "返回正无穷方向上与 target 相邻的浮点值"
+  },
+  "函数: 数学向下下一个": {
+    "prefix": ["Math.nextDown", "nextDown"],
+    "body": ["Math.nextDown(${1:target})"],
+    "description": "返回负无穷方向上与 target 相邻的浮点值"
+  },
+  "函数: 数学复制符号": {
+    "prefix": ["Math.copySign", "copySign"],
+    "body": ["Math.copySign(${1:magnitude}, ${2:sign})"],
+    "description": "返回带有第二个参数符号的第一个参数"
+  },
+  "函数: 数学标量乘法": {
+    "prefix": ["Math.scalb", "scalb"],
+    "body": ["Math.scalb(${1:target}, ${2:scaleFactor})"],
+    "description": "返回 target × 2^scaleFactor 的值"
+  },
+  "函数: 数学双曲正弦": {
+    "prefix": ["Math.sinh", "sinh"],
+    "body": ["Math.sinh(${1:target})"],
+    "description": "返回数字的双曲正弦值"
+  },
+  "函数: 数学双曲余弦": {
+    "prefix": ["Math.cosh", "cosh"],
+    "body": ["Math.cosh(${1:target})"],
+    "description": "返回数字的双曲余弦值"
+  },
+  "函数: 数学双曲正切": {
+    "prefix": ["Math.tanh", "tanh"],
+    "body": ["Math.tanh(${1:target})"],
+    "description": "返回数字的双曲正切值"
+  },
+  "函数: 数学幂运算": {
+    "prefix": ["Math.pow", "pow"],
+    "body": ["Math.pow(${1:base}, ${2:exponent})"],
+    "description": "返回 base 的 exponent 次幂"
+  },
+  "函数: 数学IEEE余数": {
+    "prefix": ["Math.IEEEremainder", "IEEEremainder"],
+    "body": ["Math.IEEEremainder(${1:dividend}, ${2:divisor})"],
+    "description": "返回 IEEE 754 标准规定的余数"
+  }
+}
