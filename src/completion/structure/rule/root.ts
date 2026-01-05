@@ -5,30 +5,36 @@ export const ui_full = {
     detail: '创建完整的UI配置模板(包含所有配置项)',
     insertText: [
         'ui:',
-        '  # 注：如果值为默认值，可删除为默认值的配置项使结构精简',
-        '  match: [] # 替换原版UI - 可在客户端日志打开想替换的UI查看ID填入此处 非脚本',
-        '  hide: [] # 隐藏HUD 如为ArcartX的HUD填入ID即可 原版ID查看文档 非脚本',
-        '  transfer: ${1|true,false|} # 是否传递交互至HUD false为默认值 脚本',
-        '  itemSize: ${2:16} # 物品拿起时的渲染大小 16为默认值 脚本',
-        '  through: ${3|true,false|} # 是否穿透点击 false为默认值 脚本',
-        '  escClose: ${4|true,false|} # 是否允许ESC关闭 true为默认值 脚本',
-        '  background: ${5|true,false|} # 是否渲染背景 true为默认值 脚本',
-        '  closeDied: ${6|true,false|} # 死亡时是否关闭UI true为默认值 脚本',
-        '  show: ${7|true,false|} # 默认是否显示 true为默认值 脚本',
-        '  jei: ${8|true,false|} # 是否显示JEI侧边栏（需要JEI） false为默认值 脚本',
-        '  level: ${9:0} # HUD显示层级 越大越靠后 默认值0 脚本',
-        '  isHud: ${10|true,false|} # 是否是HUD false为默认值 脚本',
-        '  action: # 动作（触发器）',
-        '    # 在这里添加UI触发器',
-        '  packetHandler: # 包处理器',
-        '    # 在这里添加包处理器',
+        '  # 值为默认时可省略该配置项',
+        '',
+        '  # === UI配置 ===',
+        '  match: []           # 替换原版界面ID，支持[regex]前缀正则 [非脚本]',
+        '  hide: []            # 隐藏的HUD列表 [非脚本]',
+        '',
+        '  # === Menu设置 ===',
+        '  itemSize: ${1:16}           # 拿起物品渲染大小 [默认: 16] [脚本]',
+        '  through: ${2|true,false|}   # 穿透点击 [默认: false] [脚本]',
+        '  escClose: ${3|true,false|}  # ESC关闭 [默认: true] [脚本]',
+        '  background: ${4|true,false|} # 渲染半透明背景 [默认: true] [脚本]',
+        '  closeDied: ${5|true,false|} # 死亡时关闭 [默认: true] [脚本]',
+        '  show: ${6|true,false|}      # 是否渲染 [默认: true] [脚本]',
+        '  jei: ${7|true,false|}       # 显示JEI侧边栏 [默认: false] [脚本]',
+        '',
+        '  # === HUD设置 ===',
+        '  level: ${8:0}               # 渲染优先级，越大越靠后 [默认: 0] [脚本]',
+        '  isHud: ${9|true,false|}     # 标识为HUD类型 [默认: false] [非脚本]',
+        '  defaultOpen: ${10|true,false|} # 加载后自动打开 [默认: true] [非脚本]',
+        '',
+        '  # === 高级配置 ===',
+        '  action:             # UI触发器',
+        '  packetHandler:      # 数据包处理器',
     ].join('\n'),
     kind: vscode.CompletionItemKind.Snippet
 }
 export const ui_base = {
     label: 'ui-base',
     detail: 'ui基础设定',
-    insertText: 'ui: # 可通过触发补全继续增加设定，如果全用默认值可完全删除该配置块 \n  match: []\n',
+    insertText: 'ui: # 输入 ? 触发补全添加更多配置项\n  match: []\n',
     kind: vscode.CompletionItemKind.Snippet
 }
 export const tips_base = {
@@ -37,10 +43,11 @@ export const tips_base = {
     insertText: [
         'tip:',
         '  match: ${1:匹配ID}',
+        '',
         'root_control:',
         '  type: tip',
         '  children:',
-        '    ${5:# 在这里添加Tip内容}'
+        '    ${2:# Tip内容}',
     ].join('\n'),
     kind: vscode.CompletionItemKind.Snippet
 }
@@ -50,6 +57,7 @@ export const tips_adaptive = {
     insertText: [
         'tip:',
         '  match: ${1:匹配ID}',
+        '',
         'root_control:',
         '  type: tip',
         '  attribute:',
@@ -57,7 +65,7 @@ export const tips_adaptive = {
         '    height: ${3:1080}',
         '    autoScale: true',
         '  children:',
-        '    ${5:# 在这里添加Tip内容}'
+        '    ${4:# Tip内容}',
     ].join('\n'),
     kind: vscode.CompletionItemKind.Snippet
 }
@@ -83,10 +91,10 @@ export const controls_with_adaptive = {
         '        type: canvas',
         '        attribute:',
         '          point: ~middle_center',
-        '          width: ${2:800}',
-        '          height: ${3:600}',
+        '          width: ${1:800}',
+        '          height: ${2:600}',
         '        children:',
-        '          ${4:# 在这里添加UI内容}'
+        '          ${3:# UI内容}',
     ].join('\n'),
     kind: vscode.CompletionItemKind.Snippet
 }

@@ -82,8 +82,33 @@ export const control_attribute = [
     {
         label: 'point',
         detail: '锚点[默认: top_left]',
-        insertText: 'point: ~${1|top_left,top_center,top_right,middle_left,middle_center,middle_right,bottom_left,bottom_center,bottom_right,horizontal_stretch_top,horizontal_stretch_middle,horizontal_stretch_bottom,vertical_stretch_left,vertical_stretch_center,vertical_stretch_right,stretch_all|}',
-        kind: vscode.CompletionItemKind.Property
+        insertText: 'point: ~',
+        kind: vscode.CompletionItemKind.Property,
+        documentation: new vscode.MarkdownString(
+            '## 锚点位置\n\n' +
+            '**默认值**: `top_left`\n\n' +
+            '设置控件的锚点位置，决定控件的对齐方式和坐标计算方式。\n\n' +
+            '**注意**: 锚点只有顶层组件（父级是UI本身）或者父级是 Canvas、Adaptive 时才会生效。\n\n' +
+            '**基础锚点（9点定位）**:\n' +
+            '- `top_left` - 左上角\n' +
+            '- `top_center` - 顶部中间\n' +
+            '- `top_right` - 右上角\n' +
+            '- `middle_left` - 左中间\n' +
+            '- `middle_center` - 正中间\n' +
+            '- `middle_right` - 右中间\n' +
+            '- `bottom_left` - 左下角\n' +
+            '- `bottom_center` - 底部中间\n' +
+            '- `bottom_right` - 右下角\n\n' +
+            '**拉伸锚点（需要父级为 Canvas/Adaptive/UI根）**:\n' +
+            '- `horizontal_stretch_top` - 宽度跟随父级，置于顶部\n' +
+            '- `horizontal_stretch_middle` - 宽度跟随父级，置于中间\n' +
+            '- `horizontal_stretch_bottom` - 宽度跟随父级，置于底部\n' +
+            '- `vertical_stretch_left` - 高度跟随父级，置于左侧\n' +
+            '- `vertical_stretch_center` - 高度跟随父级，置于正中\n' +
+            '- `vertical_stretch_right` - 高度跟随父级，置于右侧\n' +
+            '- `stretch_all` - 完全跟随父级宽高\n\n' +
+            '输入 `point: ~` 后会显示所有选项的详细说明。'
+        )
     },
     {
         label: 'rotate',
@@ -143,6 +168,12 @@ export const control_attribute = [
         label: 'limit',
         detail: '字数显示限制[默认: 999999] - 限制最大显示文字数',
         insertText: 'limit: ${1:999999}',
+        kind: vscode.CompletionItemKind.Property
+    },
+    {
+        label: 'through',
+        detail: '是否穿透[默认: false] - 穿透后不阻挡下方组件交互',
+        insertText: 'through: ${1|true,false|}',
         kind: vscode.CompletionItemKind.Property
     },
     {
@@ -274,8 +305,21 @@ export const control_attribute = [
     {
         label: 'slotType',
         detail: '槽位类型[默认: Backpack] (Slot独有)',
-        insertText: 'slotType: ~${1|Container,Backpack,Extra,Icon,Hover|}',
-        kind: vscode.CompletionItemKind.Property
+        insertText: 'slotType: ~',
+        kind: vscode.CompletionItemKind.Property,
+        documentation: new vscode.MarkdownString(
+            '## 槽位类型\n\n' +
+            '**默认值**: `Backpack`\n' +
+            '**适用控件**: Slot（物品槽位）\n\n' +
+            '设置物品槽位的类型，决定槽位可以存放和操作的物品类型。\n\n' +
+            '**可选类型**:\n' +
+            '- `Container` - 容器槽位\n' +
+            '- `Backpack` - 背包槽位（玩家背包物品）\n' +
+            '- `Extra` - 额外槽位\n' +
+            '- `Icon` - 图标槽位\n' +
+            '- `Hover` - 悬停槽位\n\n' +
+            '输入 `slotType: ~` 后会显示所有选项的详细说明。'
+        )
     },
     {
         label: 'id',

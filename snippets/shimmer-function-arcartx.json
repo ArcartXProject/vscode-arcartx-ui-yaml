@@ -677,5 +677,180 @@
       "Camera.lockCameraMode(${1:isLock})"
     ],
     "description": "锁定相机模式"
+  },
+  "UI: 获取顶层组件数量": {
+    "prefix": "self.childrenCount",
+    "body": [
+      "self.childrenCount()"
+    ],
+    "description": "获取顶层组件数量"
+  },
+  "UI: 关闭UI": {
+    "prefix": "self.close",
+    "body": [
+      "self.close()"
+    ],
+    "description": "关闭当前UI"
+  },
+  "UI: 获取UI ID": {
+    "prefix": "self.getID",
+    "body": [
+      "self.getID()"
+    ],
+    "description": "获取当前UI的ID"
+  },
+  "UI: 删除控件(元数据)": {
+    "prefix": "self.removeControlWithMeta",
+    "body": [
+      "self.removeControlWithMeta(${1:key}, ${2:value})"
+    ],
+    "description": "匹配控件元数据删除控件"
+  },
+  "UI: 获取控件(元数据)": {
+    "prefix": "self.getControlWithMeta",
+    "body": [
+      "self.getControlWithMeta(${1:key}, ${2:value})"
+    ],
+    "description": "匹配控件元数据获取控件列表"
+  },
+  "UI: 获取槽位物品": {
+    "prefix": "self.getSlotItemStack",
+    "body": [
+      "self.getSlotItemStack('${1:slotName}', ${2:\"Extra\"})"
+    ],
+    "description": "获取指定槽位的物品堆"
+  },
+  "UI: 获取原始名称": {
+    "prefix": "self.getOriginalName",
+    "body": [
+      "self.getOriginalName()"
+    ],
+    "description": "获取UI的原始名称（仅Menu类型）"
+  },
+  "UI: 点击槽位": {
+    "prefix": "self.clickSlot",
+    "body": [
+      "self.clickSlot(${1:id}, ${2:button}, ${3:\"PICKUP\"})"
+    ],
+    "description": "模拟点击容器槽位（仅Menu类型）"
+  },
+  "UI: 获取手持物品": {
+    "prefix": "self.getCarriedItemStack",
+    "body": [
+      "self.getCarriedItemStack()"
+    ],
+    "description": "获取鼠标指针上的物品堆（仅Menu类型）"
+  },
+  "UI: 延迟触发动作": {
+    "prefix": "self.delayAction",
+    "body": [
+      "self.delayAction(${1:delay}, '${2:actionName}')"
+    ],
+    "description": "延迟触发UI的触发器事件"
+  },
+  "UI: 获取悬停滚动": {
+    "prefix": "self.getHoverScroll",
+    "body": [
+      "self.getHoverScroll()"
+    ],
+    "description": "获取鼠标悬停的滚动控件列表（仅Menu类型）"
+  },
+  "UI: 创建控件": {
+    "prefix": "self.create",
+    "body": [
+      "self.create('${1:tempID}', '${2:newName}')"
+    ],
+    "description": "在当前界面创建一级控件（从template）"
+  },
+  "UI: 获取顶层控件": {
+    "prefix": "self.get",
+    "body": [
+      "self['${1:controlName}']"
+    ],
+    "description": "通过元素访问语法获取顶层控件对象"
+  },
+  "UI: 变量-物品大小": {
+    "prefix": "self.itemSize",
+    "body": [
+      "self.itemSize"
+    ],
+    "description": "物品渲染大小（仅Menu类型）"
+  },
+  "UI: 变量-穿透点击": {
+    "prefix": "self.through",
+    "body": [
+      "self.through"
+    ],
+    "description": "是否穿透点击"
+  },
+  "UI: 变量-ESC关闭": {
+    "prefix": "self.escClose",
+    "body": [
+      "self.escClose"
+    ],
+    "description": "是否允许ESC关闭（仅Menu类型）"
+  },
+  "UI: 变量-渲染背景": {
+    "prefix": "self.background",
+    "body": [
+      "self.background"
+    ],
+    "description": "是否渲染背景（仅Menu类型）"
+  },
+  "UI: 变量-死亡关闭": {
+    "prefix": "self.closeDied",
+    "body": [
+      "self.closeDied"
+    ],
+    "description": "死亡时是否关闭UI（仅Menu类型）"
+  },
+  "UI: 变量-是否显示": {
+    "prefix": "self.show",
+    "body": [
+      "self.show"
+    ],
+    "description": "UI是否渲染"
+  },
+  "UI: 变量-JEI侧边栏": {
+    "prefix": "self.jei",
+    "body": [
+      "self.jei"
+    ],
+    "description": "是否显示JEI侧边栏（仅Menu类型）"
+  },
+  "UI: 变量-触发器字典": {
+    "prefix": "self.actions",
+    "body": [
+      "self.actions"
+    ],
+    "description": "触发器字典（字典类型）"
+  },
+  "UI: 变量-滚轮值": {
+    "prefix": "self.wheelValue",
+    "body": [
+      "self.wheelValue"
+    ],
+    "description": "滚轮滚动值"
+  },
+  "UI: 变量-当前按键": {
+    "prefix": "self.currentKeyPress",
+    "body": [
+      "self.currentKeyPress"
+    ],
+    "description": "当前按下的按键"
+  },
+  "UI: 变量-释放按键": {
+    "prefix": "self.currentKeyReleased",
+    "body": [
+      "self.currentKeyReleased"
+    ],
+    "description": "当前释放的按键"
+  },
+  "UI: 变量-渲染层级": {
+    "prefix": "self.level",
+    "body": [
+      "self.level"
+    ],
+    "description": "HUD渲染优先级（仅HUD类型）"
   }
 }

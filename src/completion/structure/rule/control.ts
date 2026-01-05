@@ -100,7 +100,7 @@ const slot =  {
         '    normal: ~${4:resourcePath}',
         '    hover: ~${5:resourcePath}',
         '    itemScale: ${6:0.8}',
-        '    slotType: ~${7|Container,Backpack,Extra,Icon|}',
+        '    slotType: ~',
         '    id: ${8:0}'
     ].join('\n'),
     kind: vscode.CompletionItemKind.Snippet
@@ -126,7 +126,7 @@ const adaptive = {
         '  attribute:',
         '    width: ${2:1920}',
         '    height: ${3:1080}',
-        '    point: ~${4|top_left,top_center,top_right,middle_left,middle_center,middle_right,bottom_left,bottom_center,bottom_right,horizontal_stretch_top,horizontal_stretch_middle,horizontal_stretch_bottom,vertical_stretch_left,vertical_stretch_center,vertical_stretch_right,stretch_all|}'
+        '    point: ~${4:top_left}'
     ].join('\n'),
     kind: vscode.CompletionItemKind.Snippet
 }
@@ -221,7 +221,7 @@ const scroll_full = {
         '          self.parent[\'hButton\'].getDragXRatio()',
         '      children:',
         '        container:',
-        '          type: ${4|canvas,vGrid,hGrid,vStack,hStack|}',
+        '          type: ${4:canvas}',
         '          attribute:',
         '            width: ${5:1270}',
         '            height: ${6:1000}',
@@ -260,7 +260,7 @@ const scroll_v = {
         '          self.parent[\'vButton\'].getDragYRatio()',
         '      children:',
         '        container:',
-        '          type: ${4|canvas,vGrid,hGrid,vStack,hStack|}',
+        '          type: ${4:canvas}',
         '          attribute:',
         '            width: |',
         '              self.parent.width',
@@ -300,7 +300,7 @@ const scroll_h = {
         '          self.parent[\'hButton\'].getDragXRatio()',
         '      children:',
         '        container:',
-        '          type: ${4|canvas,vGrid,hGrid,vStack,hStack|}',
+        '          type: ${4:canvas}',
         '          attribute:',
         '            width: ${5:1000}',
         '            height: |',
@@ -402,10 +402,178 @@ const hotbar_slots = {
     kind: vscode.CompletionItemKind.Snippet
 }
 
+// ========== 游戏内容显示（续）==========
+const model = {
+    label: 'model',
+    detail: '创建模特控件',
+    insertText: [
+        '${1:model_${CURRENT_SECONDS_UNIX}}:',
+        '  type: model',
+        '  attribute:',
+        '    model: ~${2:modelId}',
+        '    animation: ~${3:animation}',
+        '    scale: ${4:1}',
+        '    followMouse: ${5:false}'
+    ].join('\n'),
+    kind: vscode.CompletionItemKind.Snippet
+}
+const bossBar = {
+    label: 'bossBar',
+    detail: '创建多层血条控件',
+    insertText: [
+        '${1:bossBar_${CURRENT_SECONDS_UNIX}}:',
+        '  type: bossBar',
+        '  attribute:',
+        '    textures: ~[${2:texture1.png,texture2.png}]',
+        '    transitionTime: ${3:500}'
+    ].join('\n'),
+    kind: vscode.CompletionItemKind.Snippet
+}
+
+// ========== 特殊控件 ==========
+const compass = {
+    label: 'compass',
+    detail: '创建罗盘控件',
+    insertText: [
+        '${1:compass_${CURRENT_SECONDS_UNIX}}:',
+        '  type: compass',
+        '  attribute:',
+        '    width: ${2:400}',
+        '    height: ${3:400}',
+        '    background: ~0,0,0,180',
+        '    textColor: ~255,255,255',
+        '    tickColor: ~255,255,255',
+        '    directionColor: ~255,255,255',
+        '    tickInterval: ${4:5}',
+        '    majorTickInterval: ${5:15}'
+    ].join('\n'),
+    kind: vscode.CompletionItemKind.Snippet
+}
+const progress = {
+    label: 'progress',
+    detail: '创建进度条控件',
+    insertText: [
+        '${1:progress_${CURRENT_SECONDS_UNIX}}:',
+        '  type: progress',
+        '  attribute:',
+        '    width: ${2:200}',
+        '    height: ${3:20}',
+        '    texture: ~${4:255,255,255}',
+        '    progress: ~${5:0.5}',
+        '    time: ${6:100}',
+        '    mode: ${7:0}'
+    ].join('\n'),
+    kind: vscode.CompletionItemKind.Snippet
+}
+const _import = {
+    label: 'import',
+    detail: '创建导入器控件',
+    insertText: [
+        '${1:import_${CURRENT_SECONDS_UNIX}}:',
+        '  type: import',
+        '  attribute:',
+        '    node: ~${2:menu.uiId.adaptive.controlName}'
+    ].join('\n'),
+    kind: vscode.CompletionItemKind.Snippet
+}
+const observer = {
+    label: 'observer',
+    detail: '创建观察者控件',
+    insertText: [
+        '${1:observer_${CURRENT_SECONDS_UNIX}}:',
+        '  type: observer',
+        '  attribute:',
+        '    maxSize: ${2:32}',
+        '    subscribe: ~${3:global.dictVar}',
+        '    target: val.${4:targetControl}'
+    ].join('\n'),
+    kind: vscode.CompletionItemKind.Snippet
+}
+
+// ========== 聊天相关 ==========
+const chatTextBox = {
+    label: 'chatTextBox',
+    detail: '创建聊天栏输入框控件',
+    insertText: [
+        '${1:chatInput_${CURRENT_SECONDS_UNIX}}:',
+        '  type: chatTextBox',
+        '  attribute:',
+        '    width: ${2:800}',
+        '    height: ${3:30}',
+        '    fontSize: ${4:20}',
+        '    background: ~0,0,0',
+        '    sendClose: ${5:true}',
+        '  children:',
+        '    suggestion:',
+        '      type: suggestion',
+        '      attribute:',
+        '        fontSize: ${6:20}',
+        '        maxShow: ${7:5}'
+    ].join('\n'),
+    kind: vscode.CompletionItemKind.Snippet
+}
+const suggestion = {
+    label: 'suggestion',
+    detail: '创建命令补全器控件',
+    insertText: [
+        '${1:suggestion_${CURRENT_SECONDS_UNIX}}:',
+        '  type: suggestion',
+        '  attribute:',
+        '        fontSize: ${1:20}',
+        '        maxShow: ${2:5}',
+        '        textColor: #FFFFFF',
+        '        hoverTextColor: #87CEEB'
+    ].join('\n'),
+    kind: vscode.CompletionItemKind.Snippet
+}
+const chat = {
+    label: 'chat',
+    detail: '创建聊天栏控件',
+    insertText: [
+        '${1:chat_${CURRENT_SECONDS_UNIX}}:',
+        '  type: chat',
+        '  attribute:',
+        '    width: ${2:600}',
+        '    height: ${3:300}',
+        '    background: ~0,0,0,175',
+        '    border: ${4:5}',
+        '    spaceBetween: ${5:5}',
+        '    showCard: ${6:true}'
+    ].join('\n'),
+    kind: vscode.CompletionItemKind.Snippet
+}
+
+// ========== 布局型（续）==========
+const bossBars = {
+    label: 'bossBars',
+    detail: '创建血条排列器控件',
+    insertText: [
+        '${1:bossBars_${CURRENT_SECONDS_UNIX}}:',
+        '  type: bossBars',
+        '  attribute:',
+        '    spaceBetween: ${1:10}',
+        '    maxSize: ${2:3}'
+    ].join('\n'),
+    kind: vscode.CompletionItemKind.Snippet
+}
+
 export const controls = [
-    texture, text, _9sliceTexture, textInput, passwordInput, entity, slot,
+    // 基础显示
+    texture, text, _9sliceTexture,
+    // 输入
+    textInput, passwordInput,
+    // 游戏内容显示
+    entity, slot, model, bossBar,
+    // 布局型
     canvas, adaptive, hGrid, vGrid, hStack, vStack,
+    // 滚动
     scroll_full, scroll_v, scroll_h,
+    // 特殊控件
+    compass, progress, _import, observer,
+    // 聊天相关
+    chatTextBox, suggestion, chat,
+    bossBars,
+    // 快捷模板
     button, button_text,
     inv_slots, hotbar_slots
 ]

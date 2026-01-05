@@ -3,10 +3,10 @@
   "displayName": "ArcartX Shimmer UI",
   "icon": "icons/project.png",
   "description": "ArcartX 界面配置开发工具，基于 YAML 语法，支持 Shimmer 高亮补全、ArcartX UI 结构补全。",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "publisher": "ArcartXProject",
   "author": {
-    "name": "17Artist"
+    "name": "17Artist,MayIHaveK"
   },
   "preview": true,
   "engines": {
