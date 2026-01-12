@@ -1,5 +1,11 @@
 /package-lock.json
 /out/
+/dist/
 /node_modules/
 /.idea/
 /.claude/
+/.vscode-test-web/
+/web-test-workspace/
+/launch-web.js
+/tsconfig.web.json
+/nul
