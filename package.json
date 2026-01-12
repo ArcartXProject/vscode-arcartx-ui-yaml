@@ -20,8 +20,11 @@
   "keywords": [
     "arcartx"
   ],
-  "activationEvents": [],
-    "main": "./out/extension.js",
+  "activationEvents": [
+    "onLanguage:arcartx-ui-yaml"
+  ],
+  "main": "./out/extension.js",
+  "browser": "./dist/extension.js",
   "contributes": {
     "languages": [
       {
@@ -201,17 +204,24 @@
     }
   },
   "scripts": {
-    "vscode:prepublish": "npm run compile",
+    "vscode:prepublish": "npm run compile && npm run compile-web",
     "compile": "tsc -p ./",
+    "compile-web": "webpack --mode production",
     "watch": "tsc -watch -p ./",
+    "watch-web": "webpack --mode development --watch",
     "pretest": "npm run compile && npm run lint",
     "lint": "eslint src",
-    "test": "vscode-test"
+    "test": "vscode-test",
+    "test-web": "npm run compile-web && vscode-test-web --browserType=chromium --extensionDevelopmentPath=."
   },
   "devDependencies": {
     "@types/node": "16.x",
     "@types/vscode": "^1.74.0",
-    "typescript": "^4.9.4"
+    "@vscode/test-web": "^0.0.78",
+    "ts-loader": "^9.5.4",
+    "typescript": "^4.9.4",
+    "webpack": "^5.104.1",
+    "webpack-cli": "^6.0.1"
   },
   "license": "Apache-2.0",
   "repository": {
